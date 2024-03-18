@@ -101,7 +101,7 @@ const oldest = inventors.sort((a, b) => {
     return lastGuy > nextGuy ? 1 : -1; // if lastGuy is greater than nextGuy, return 1, else -1
 });
 
-console.table(oldest);
+// console.table(oldest);
 
 // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
 // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
@@ -116,7 +116,7 @@ const de = links
         if (streetName.includes('de')) return true; //
     });
 
-console.log(de);
+// console.log(de);
 
 // 7. sort Exercise
 // Sort the people alphabetically by last name
@@ -127,7 +127,7 @@ const alphaPeople = people.sort((lastOne, nextOne) => {
     return lastA > lastB ? 1 : -1; // if lastA is greater than lastB, return 1, else -1
 });
 
-console.log(alphaPeople);
+// console.log(alphaPeople);
 
 // 8. Reduce Exercise
 // Sum up the instances of each of these
@@ -163,7 +163,7 @@ const sumUp = data.reduce(function (obj, item) {
     return obj; // return the object
 }, {}); // start with an empty object then add the items
 
-console.log(sumUp);
+// console.log(sumUp);
 
 // -----------------------------------------------------------------------------
 
@@ -176,4 +176,4 @@ const printOutput = arr => {
     }
 };
 
-printOutput(data);
+// printOutput(data);
