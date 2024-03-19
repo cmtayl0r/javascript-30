@@ -11,7 +11,7 @@ const tempF = tempC.map(temp => {
     return fahrenheit;
 });
 
-console.log(tempF);
+// console.log(tempF);
 // [32, 68, 86, 104]
 
 // ------ Challenge 2
@@ -25,7 +25,7 @@ const namesCap = names.map(name => {
     return newName.replace(newName[0], newName[0].toUpperCase());
 });
 
-console.log(namesCap);
+// console.log(namesCap);
 // ["Alice", "Bob", "Charlie", "David"]
 
 // -----------------------------------------------------------------------------
@@ -40,7 +40,7 @@ const squaresSum = squares.reduce((total, num) => {
     return total + num ** 2;
 }, 0);
 
-console.log(squaresSum);
+// console.log(squaresSum);
 
 // ------ Challenge 2
 
@@ -60,7 +60,7 @@ const fruitSum = fruit.reduce((obj, item) => {
     return obj;
 }, {});
 
-console.log(fruitSum);
+// console.log(fruitSum);
 
 // -----------------------------------------------------------------------------
 // Sort method
@@ -82,7 +82,7 @@ const fruitSort = fruit2.sort((a, b) => {
     }
 });
 
-console.log(fruitSort);
+// console.log(fruitSort);
 
 // ------ Challenge 2
 
@@ -92,7 +92,7 @@ const numSort = numbers.sort((a, b) => {
     return a > b ? -1 : 1;
 });
 
-console.log(numSort);
+// console.log(numSort);
 
 // -----------------------------------------------------------------------------
 // Filter method
@@ -106,7 +106,7 @@ const numFilter = nummers.filter(num => {
     if (num !== 3) return true;
 });
 
-console.log(numFilter);
+// console.log(numFilter);
 
 // ------ Challenge 2
 
@@ -114,7 +114,7 @@ const evenFilter = nummers.filter(num => {
     if (num % 2 === 0) return true;
 });
 
-console.log(evenFilter);
+// console.log(evenFilter);
 
 // const isEven = n => n % 2 === 0;
 
@@ -137,7 +137,7 @@ const avgGrade = students.map(({ name, grades }) => {
     return { name, averageGrade };
 });
 
-console.log(avgGrade);
+// console.log(avgGrade);
 
 // -----------------------------------------------------------------------------
 // Integrated challenge #2
@@ -154,6 +154,31 @@ const products = [
 const highProducts = products
     .filter(({ price }) => price >= 100) // filter products with price >= 100
     .sort((a, b) => a.price - b.price) // sort products by price a = current, b = next
-    .map(({ name }) => name); // map products to get only the name, create new array
+    .map(({ name }) => name); // map products to get  only the name, create new array
 
-console.log(highProducts);
+// console.log(highProducts);
+
+// -----------------------------------------------------------------------------
+// Integrated challenge #3
+// -----------------------------------------------------------------------------
+
+const stock = [
+    { category: 'Electronics', inStock: true, price: 299.99 },
+    { category: 'Electronics', inStock: false, price: 199.99 },
+    { category: 'Clothing', inStock: true, price: 19.99 },
+    { category: 'Clothing', inStock: true, price: 29.99 },
+    { category: 'Electronics', inStock: true, price: 399.99 },
+];
+
+// -----------------------------------------------------------------------------
+// Integrated challenge #4
+// -----------------------------------------------------------------------------
+
+const transactions = [
+    { userId: 1, amount: 50, category: 'Food' },
+    { userId: 2, amount: 20, category: 'Clothing' },
+    { userId: 1, amount: 70, category: 'Food' },
+    { userId: 3, amount: 30, category: 'Food' },
+    { userId: 2, amount: 80, category: 'Food' },
+    { userId: 3, amount: 120, category: 'Electronics' },
+];
