@@ -37,7 +37,10 @@ const findMatches = function (wordToMatch, cities) {
 };
 
 const displayMatches = async function () {
-    await fetchCities(endpoint);
+    await fetchCities(endpoint).catch(error => {
+        console.error('Failed to fetch cities:', error);
+        // TODO: display an error to the user in the UI
+    });
     const matchArray = findMatches(this.value, cities);
     const html = matchArray
         .map(place => {
@@ -61,6 +64,7 @@ const displayMatches = async function () {
         })
         .join('');
     searchSuggestions.innerHTML = html;
+    // TODO: Adding an ARIA live region update to suggestions would be beneficial for accessibility
 };
 
 searchInput.addEventListener('change', displayMatches);
