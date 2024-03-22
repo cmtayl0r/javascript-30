@@ -21,13 +21,15 @@ const handlecheck = function (evt) {
             if (checkbox === this || checkbox === lastChecked) {
                 inBetween = !inBetween;
             }
-            // If the current checkbox is within the range to select, set its checked property to true.
+            // If the current checkbox is within the range to select ...
+            // ... set its checked property to true.
             if (inBetween) {
                 checkbox.checked = true;
             }
         });
     }
-
+    // Updates lastChecked with the checkbox that triggered the current event...
+    // ... for use in subsequent selections.
     lastChecked = this;
 };
 
