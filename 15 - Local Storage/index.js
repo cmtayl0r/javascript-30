@@ -1,3 +1,6 @@
+// FIXME: checked attribute not being set when check box is clicked
+// FIXME: "Add an item" is showing when an item is added
+
 // -----------------------------------------------------------------------------
 // DOM elements
 // -----------------------------------------------------------------------------
@@ -80,6 +83,8 @@ const toggleDone = function (evt) {
     const index = evt.target.dataset.index;
     // If this is true, the value will be false and vice versa
     items[index].done = !items[index].done;
+    // Set the checked property of the input to the done property of the item
+    evt.target.checked = items[index].done;
     // Save the updated array to localStorage
     saveItems();
 };
@@ -105,6 +110,7 @@ const uncheckAll = function () {
 // -----------------------------------------------------------------------------
 // Event listeners
 // -----------------------------------------------------------------------------
+
 // Listen for the submit event on the form
 addItems.addEventListener('submit', addItem);
 // Listen for the click event on the list
