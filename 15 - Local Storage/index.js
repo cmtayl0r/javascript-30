@@ -83,8 +83,16 @@ const toggleDone = function (evt) {
     const index = evt.target.dataset.index;
     // If this is true, the value will be false and vice versa
     items[index].done = !items[index].done;
+
     // Set the checked property of the input to the done property of the item
-    evt.target.checked = items[index].done;
+    // evt.target.checked = items[index].done;
+    // Directly toggle the 'checked' attribute to reflect the change
+    if (items[index].done) {
+        evt.target.setAttribute('checked', '');
+    } else {
+        evt.target.removeAttribute('checked');
+    }
+
     // Save the updated array to localStorage
     saveItems();
 };
