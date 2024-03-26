@@ -7,6 +7,7 @@ navigator.geolocation.watchPosition(
         speed.textContent = Math.round(data.coords.speed);
         arrow.style.transform = `rotate(${data.coords.heading}deg)`;
     },
-    err => {}
-    alert('Hey you need to enable x and y')
+    err => {
+        alert('Hey you need to enable x and y');
+    }
 );
