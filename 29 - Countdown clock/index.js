@@ -124,5 +124,6 @@ document.customForm.addEventListener('submit', function (evt) {
         // Alerting the user for invalid input
         alert('Please enter a valid number of minutes.');
     }
-    this.reset(); // reset the input
+    // Resets the form input after submission.
+    this.reset();
 });
